@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AslamShop</string>
+    <string name="spalding_basketball">Spalding Basketball</string>
+    <string name="card1description">The Spalding ball is the official ball used in the NBA that can be used for indoor and outdoor use.</string>
+    <string name="increasesymbol">+</string>
+    <string name="decreasesymbol">-</string>
+    <string name="checkout">Checkout</string>
 </resources>
