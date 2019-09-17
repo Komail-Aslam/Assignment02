@@ -5,4 +5,5 @@
     <string name="increasesymbol">+</string>
     <string name="decreasesymbol">-</string>
     <string name="checkout">Checkout</string>
+    <string name="proceed">Proceed</string>
 </resources>
