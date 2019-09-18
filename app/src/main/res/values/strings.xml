@@ -6,4 +6,6 @@
     <string name="decreasesymbol">-</string>
     <string name="checkout">Checkout</string>
     <string name="proceed">Proceed</string>
+    <string name="welcome">Welcome to the Aslam Shop!</string>
+    <string name="instructions">Press the button below to proceed to the shopping page and buy from our large selection of products.</string>
 </resources>

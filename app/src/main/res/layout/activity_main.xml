@@ -14,7 +14,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="514dp"
-        android:text="Welcome to the Aslam Shop!"
+        android:text="@string/welcome"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
         android:layout_marginTop="160dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
-        android:text="Press the button below to proceed to the shopping page and buy from our large selection of products."
+        android:text="@string/instructions"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
 
     <Button
-        android:id="@+id/proceedButton"
+        android:id="@+id/proceed_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -48,6 +48,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/proceed"
+        android:onClick="launchMenuActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
