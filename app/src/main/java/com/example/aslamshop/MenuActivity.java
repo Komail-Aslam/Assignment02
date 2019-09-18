@@ -17,8 +17,8 @@ public class MenuActivity extends AppCompatActivity {
     private static final String LOG_TAG = MenuActivity.class.getSimpleName();
     private TextView quantityTextView;
     private int quantity;
-    private int quantityTotal;
-    private int price;
+    private double quantityTotal;
+    private double price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,18 +38,30 @@ public class MenuActivity extends AppCompatActivity {
         quantity = Integer.parseInt(quantityTextView.getText().toString());
         quantity++;
         quantityTextView.setText(Integer.toString(quantity));
+
         TextView priceOfItem = (TextView) findViewById(card1price);
-        price = Integer.parseInt(quantityTextView.getText().toString());
+        price = Double.parseDouble(priceOfItem.getText().toString());
+
         TextView quantityTotalView = (TextView) findViewById(card1total);
-        quantityTotal = Integer.parseInt(quantityTotalView.getText().toString());
+        quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
         quantityTotal += price;
+        quantityTotalView.setText(Double.toString(quantityTotal));
     }
 
     public void decrease(View view){
         TextView quantityTextView = (TextView) findViewById(card1quantity);
         quantity = Integer.parseInt(quantityTextView.getText().toString());
-        if (quantity > 0)
+        if (quantity > 0) {
             quantity--;
-        quantityTextView.setText(Integer.toString(quantity));
+            quantityTextView.setText(Integer.toString(quantity));
+
+            TextView priceOfItem = (TextView) findViewById(card1price);
+            price = Double.parseDouble(priceOfItem.getText().toString());
+
+            TextView quantityTotalView = (TextView) findViewById(card1total);
+            quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
+            quantityTotal -= price;
+            quantityTotalView.setText(Double.toString(quantityTotal));
+        }
     }
 }
