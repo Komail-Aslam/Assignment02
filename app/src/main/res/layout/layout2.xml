@@ -14,7 +14,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/spalding_basketball"
+        android:text="@string/card2header"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/imageofitem"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,14 +55,12 @@
 
     <TextView
         android:id="@+id/card1description"
-        android:layout_width="280dp"
+        android:layout_width="284dp"
         android:layout_height="62dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp":layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="@string/card1description"
+        android:text="@string/card2description"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/card1quantity"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +73,7 @@
         android:id="@+id/increasequantity"
         android:layout_width="70dp"
         android:layout_height="48dp"
-        android:layout_marginStart="192dp"
+        android:layout_marginStart="188dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="increase2"
@@ -101,10 +99,10 @@
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.172"
+        app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card1description"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/card2quantity"
