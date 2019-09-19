@@ -19,6 +19,8 @@ public class MenuActivity extends AppCompatActivity {
     private int quantity;
     private double quantityTotal;
     private double price;
+    private double overalltotal;
+    private TextView overalltotalview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,7 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void increase(View view){
-        TextView quantityTextView = (TextView) findViewById(card1quantity);
+        quantityTextView = (TextView) findViewById(card1quantity);
         quantity = Integer.parseInt(quantityTextView.getText().toString());
         quantity++;
         quantityTextView.setText(Integer.toString(quantity));
@@ -62,6 +64,71 @@ public class MenuActivity extends AppCompatActivity {
             quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
             quantityTotal -= price;
             quantityTotalView.setText(Double.toString(quantityTotal));
+            overalltotal -= price;
         }
     }
+    public void increase2(View view){
+        quantityTextView = (TextView) findViewById(R.id.card2quantity);
+        quantity = Integer.parseInt(quantityTextView.getText().toString());
+        quantity++;
+        quantityTextView.setText(Integer.toString(quantity));
+
+        TextView priceOfItem = (TextView) findViewById(R.id.card2price);
+        price = Double.parseDouble(priceOfItem.getText().toString());
+
+        TextView quantityTotalView = (TextView) findViewById(R.id.card2total);
+        quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
+        quantityTotal += price;
+        quantityTotalView.setText(Double.toString(quantityTotal));
+    }
+
+    public void decrease2(View view){
+        TextView quantityTextView = (TextView) findViewById(R.id.card2quantity);
+        quantity = Integer.parseInt(quantityTextView.getText().toString());
+        if (quantity > 0) {
+            quantity--;
+            quantityTextView.setText(Integer.toString(quantity));
+
+            TextView priceOfItem = (TextView) findViewById(R.id.card2price);
+            price = Double.parseDouble(priceOfItem.getText().toString());
+
+            TextView quantityTotalView = (TextView) findViewById(R.id.card2total);
+            quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
+            quantityTotal -= price;
+            quantityTotalView.setText(Double.toString(quantityTotal));
+        }
+    }
+    public void increase3(View view){
+        quantityTextView = (TextView) findViewById(card1quantity);
+        quantity = Integer.parseInt(quantityTextView.getText().toString());
+        quantity++;
+        quantityTextView.setText(Integer.toString(quantity));
+
+        TextView priceOfItem = (TextView) findViewById(card1price);
+        price = Double.parseDouble(priceOfItem.getText().toString());
+
+        TextView quantityTotalView = (TextView) findViewById(card1total);
+        quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
+        quantityTotal += price;
+        quantityTotalView.setText(Double.toString(quantityTotal));
+    }
+
+    public void decrease3(View view){
+        TextView quantityTextView = (TextView) findViewById(card1quantity);
+        quantity = Integer.parseInt(quantityTextView.getText().toString());
+        if (quantity > 0) {
+            quantity--;
+            quantityTextView.setText(Integer.toString(quantity));
+
+            TextView priceOfItem = (TextView) findViewById(card1price);
+            price = Double.parseDouble(priceOfItem.getText().toString());
+
+            TextView quantityTotalView = (TextView) findViewById(card1total);
+            quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
+            quantityTotal -= price;
+            quantityTotalView.setText(Double.toString(quantityTotal));
+        }
+    }
+
+
 }
