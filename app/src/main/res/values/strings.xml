@@ -9,4 +9,7 @@
     <string name="welcome">Welcome to the Aslam Shop!</string>
     <string name="instructions">Press the button below to proceed to the shopping page and buy from our large selection of products.</string>
     <string name="card1price">30.00</string>
+    <string name="clippers_basketball">Clippers Basketball</string>
+    <string name="card3price">40.00</string>
+    <string name="card3description">The Los Angeles Clippers ball is great for outdoor playing and allows you to represent the team on the court.</string>
 </resources>
