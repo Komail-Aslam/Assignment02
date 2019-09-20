@@ -19,8 +19,8 @@ public class MenuActivity extends AppCompatActivity {
     private int quantity;
     private double quantityTotal;
     private double price;
-    private double overalltotal;
-    private TextView overalltotalview;
+    public double overalltotal;
+    public static final String intentkey = "com.example.android.aslamshop.extra.key";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class MenuActivity extends AppCompatActivity {
     public void launchCheckoutActivity(View view) {
         Log.d(LOG_TAG, "checkout button clicked");
         Intent intent = new Intent(this, CheckoutActivity.class);
+        intent.putExtra(intentkey, overalltotal);
         startActivity(intent);
     }
 
@@ -48,6 +49,8 @@ public class MenuActivity extends AppCompatActivity {
         quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
         quantityTotal += price;
         quantityTotalView.setText(Double.toString(quantityTotal));
+
+        overalltotal += price;
     }
 
     public void decrease(View view){
@@ -80,6 +83,7 @@ public class MenuActivity extends AppCompatActivity {
         quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
         quantityTotal += price;
         quantityTotalView.setText(Double.toString(quantityTotal));
+        overalltotal += price;
     }
 
     public void decrease2(View view){
@@ -96,37 +100,40 @@ public class MenuActivity extends AppCompatActivity {
             quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
             quantityTotal -= price;
             quantityTotalView.setText(Double.toString(quantityTotal));
+            overalltotal -= price;
         }
     }
     public void increase3(View view){
-        quantityTextView = (TextView) findViewById(card1quantity);
+        quantityTextView = (TextView) findViewById(R.id.card3quantity);
         quantity = Integer.parseInt(quantityTextView.getText().toString());
         quantity++;
         quantityTextView.setText(Integer.toString(quantity));
 
-        TextView priceOfItem = (TextView) findViewById(card1price);
+        TextView priceOfItem = (TextView) findViewById(R.id.card3price);
         price = Double.parseDouble(priceOfItem.getText().toString());
 
-        TextView quantityTotalView = (TextView) findViewById(card1total);
+        TextView quantityTotalView = (TextView) findViewById(R.id.card3total);
         quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
         quantityTotal += price;
         quantityTotalView.setText(Double.toString(quantityTotal));
+        overalltotal += price;
     }
 
     public void decrease3(View view){
-        TextView quantityTextView = (TextView) findViewById(card1quantity);
+        TextView quantityTextView = (TextView) findViewById(R.id.card3quantity);
         quantity = Integer.parseInt(quantityTextView.getText().toString());
         if (quantity > 0) {
             quantity--;
             quantityTextView.setText(Integer.toString(quantity));
 
-            TextView priceOfItem = (TextView) findViewById(card1price);
+            TextView priceOfItem = (TextView) findViewById(R.id.card3price);
             price = Double.parseDouble(priceOfItem.getText().toString());
 
-            TextView quantityTotalView = (TextView) findViewById(card1total);
+            TextView quantityTotalView = (TextView) findViewById(R.id.card3total);
             quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
             quantityTotal -= price;
             quantityTotalView.setText(Double.toString(quantityTotal));
+            overalltotal -= price;
         }
     }
 

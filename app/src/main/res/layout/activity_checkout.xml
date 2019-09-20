@@ -15,9 +15,10 @@
         android:layout_marginBottom="8dp"
         android:text="TVQ:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/totalAfterText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/totalBeforeText" />
+        app:layout_constraintTop_toBottomOf="@+id/totalBeforeTax" />
 
     <TextView
         android:id="@+id/tpsText"
@@ -29,14 +30,15 @@
         android:layout_marginBottom="8dp"
         android:text="TPS:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/totalAfterText"
         app:layout_constraintEnd_toStartOf="@+id/tvqText"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/totalBeforeText" />
+        app:layout_constraintTop_toBottomOf="@+id/totalBeforeTax" />
 
     <TextView
-        android:id="@+id/totalBeforeText"
+        android:id="@+id/totalBeforeTax"
         android:layout_width="301dp"
         android:layout_height="51dp"
         android:layout_marginStart="8dp"
@@ -46,6 +48,7 @@
         android:text="Total before taxes:"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/totalAfterText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,6 +66,7 @@
         android:text="Total after taxes:"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,11 +83,12 @@
         android:layout_marginBottom="8dp"
         android:text="$999.99"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/tvqText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/totalBeforeText"
+        app:layout_constraintTop_toBottomOf="@+id/totalBeforeTax"
         app:layout_constraintVertical_bias="0.307" />
 
     <TextView
@@ -91,14 +96,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="108dp"
+        android:layout_marginEnd="128dp"
         android:layout_marginBottom="8dp"
         android:text="$999.99"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/totalAfterText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvqText"
-        app:layout_constraintVertical_bias="0.043" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tpsNum"
@@ -110,12 +116,13 @@
         android:layout_marginBottom="8dp"
         android:text="$999.99"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/totalAfterText"
         app:layout_constraintEnd_toStartOf="@+id/tvqNum"
-        app:layout_constraintHorizontal_bias="0.643"
+        app:layout_constraintHorizontal_bias="0.669"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tpsText"
-        app:layout_constraintVertical_bias="0.021" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/totalAfterNum"
@@ -126,6 +133,7 @@
         android:layout_marginEnd="8dp"
         android:text="$999.99"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
