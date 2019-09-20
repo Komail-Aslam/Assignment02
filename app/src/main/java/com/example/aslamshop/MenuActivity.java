@@ -48,7 +48,7 @@ public class MenuActivity extends AppCompatActivity {
         TextView quantityTotalView = (TextView) findViewById(card1total);
         quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
         quantityTotal += price;
-        quantityTotalView.setText(Double.toString(quantityTotal));
+        quantityTotalView.setText(String.format("%.2f",quantityTotal));
 
         overalltotal += price;
     }
@@ -66,7 +66,7 @@ public class MenuActivity extends AppCompatActivity {
             TextView quantityTotalView = (TextView) findViewById(card1total);
             quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
             quantityTotal -= price;
-            quantityTotalView.setText(Double.toString(quantityTotal));
+            quantityTotalView.setText(String.format("%.2f",quantityTotal));
             overalltotal -= price;
         }
     }
@@ -82,7 +82,7 @@ public class MenuActivity extends AppCompatActivity {
         TextView quantityTotalView = (TextView) findViewById(R.id.card2total);
         quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
         quantityTotal += price;
-        quantityTotalView.setText(Double.toString(quantityTotal));
+        quantityTotalView.setText(String.format("%.2f",quantityTotal));
         overalltotal += price;
     }
 
@@ -99,7 +99,7 @@ public class MenuActivity extends AppCompatActivity {
             TextView quantityTotalView = (TextView) findViewById(R.id.card2total);
             quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
             quantityTotal -= price;
-            quantityTotalView.setText(Double.toString(quantityTotal));
+            quantityTotalView.setText(String.format("%.2f",quantityTotal));
             overalltotal -= price;
         }
     }
@@ -115,7 +115,7 @@ public class MenuActivity extends AppCompatActivity {
         TextView quantityTotalView = (TextView) findViewById(R.id.card3total);
         quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
         quantityTotal += price;
-        quantityTotalView.setText(Double.toString(quantityTotal));
+        quantityTotalView.setText(String.format("%.2f",quantityTotal));
         overalltotal += price;
     }
 
@@ -132,7 +132,7 @@ public class MenuActivity extends AppCompatActivity {
             TextView quantityTotalView = (TextView) findViewById(R.id.card3total);
             quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
             quantityTotal -= price;
-            quantityTotalView.setText(Double.toString(quantityTotal));
+            quantityTotalView.setText(String.format("%.2f",quantityTotal));
             overalltotal -= price;
         }
     }
