@@ -15,4 +15,10 @@
     <string name="card2price">40.00</string>
     <string name="card2header">Raptors Basketball</string>
     <string name="card2description">The Raptors basketball made by Spalding is a great ball for casual playing and made by the official company of the NBA.</string>
+    <string name="thankyoumessage">Thank you for shopping with us!</string>
+    <string name="defaulttotal">$00.00</string>
+    <string name="total_after_taxes">Total after taxes:</string>
+    <string name="total_before_taxes">Total before taxes:</string>
+    <string name="tps">TPS:</string>
+    <string name="tvq">TVQ:</string>
 </resources>

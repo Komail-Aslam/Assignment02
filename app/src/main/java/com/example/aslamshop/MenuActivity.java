@@ -15,12 +15,12 @@ import static com.example.aslamshop.R.id.card1total;
 public class MenuActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = MenuActivity.class.getSimpleName();
-    private TextView quantityTextView;
-    private int quantity;
-    private double quantityTotal;
-    private double price;
-    public double overalltotal;
-    public static final String intentkey = "com.example.android.aslamshop.extra.key";
+    private TextView quantityTextView; //view used to assign the quantity view from the layout to
+    private int quantity; //the quantity of the item to be bought
+    private double quantityTotal; //the total price of all the quantity of the layout
+    private double price; //the price of the item in the layout
+    public double overalltotal; //variable to keep track of the total of all the items in the menu
+    public static final String intentkey = "com.example.android.aslamshop.extra.key"; //key for the intent to pass the overalltotal
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,7 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //increase and decrease method for each layout(An increase and decrease unique to its layout
     public void increase(View view){
         quantityTextView = (TextView) findViewById(card1quantity);
         quantity = Integer.parseInt(quantityTextView.getText().toString());
@@ -136,6 +137,4 @@ public class MenuActivity extends AppCompatActivity {
             overalltotal -= price;
         }
     }
-
-
 }
