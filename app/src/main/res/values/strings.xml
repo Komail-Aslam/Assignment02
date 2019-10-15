@@ -5,7 +5,6 @@
     <string name="increasesymbol">+</string>
     <string name="decreasesymbol">-</string>
     <string name="checkout">Checkout</string>
-    <string name="proceed">Proceed</string>
     <string name="welcome">Welcome to the Aslam Shop!</string>
     <string name="instructions">Press the button below to proceed to the shopping page and buy from our large selection of products.</string>
     <string name="cardprice">30.00</string>
@@ -22,4 +21,7 @@
     <string name="tps">TPS:</string>
     <string name="tvq">TVQ:</string>
     <string name="title_activity_basic_menu">BasicMenu</string>
+    <string name="quantity">30.00</string>
+    <string name="proceed">Proceed</string>
+    <string name="proceedButton">Proceed</string>
 </resources>

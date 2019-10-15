@@ -15,7 +15,7 @@ public class CheckoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
         Intent intentnew = getIntent();
-        double sumbeforetax = (intentnew.getDoubleExtra(MenuActivity.intentkey, 0));
+        double sumbeforetax = (intentnew.getIntExtra("total", 0));
 
         //Sets the textview for the total before taxes to sumbeforetax variable
         TextView view = findViewById(R.id.totalBeforeNum);

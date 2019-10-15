@@ -37,7 +37,7 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.ItemViewHold
         ShoppingItem current = mItemList.get(i);
         itemViewHolder.mItemHeader.setText(current.getTitle());
         itemViewHolder.mItemDescription.setText(current.getDescription());
-        itemViewHolder.mItemQuantity.setText((current.getQuantity()));
+        //itemViewHolder.mItemQuantity.setText(current.getQuantity());
         itemViewHolder.mItemPrice.setText(current.getPrice());
         itemViewHolder.mItemImage.setImageDrawable(current.getImg());
     }
@@ -47,24 +47,39 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.ItemViewHold
         return mItemList.size();
     }
 
-    public class ItemViewHolder extends RecyclerView.ViewHolder{
+    public class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         final AdapterClass mAdapter;
         public final TextView mItemHeader;
         public final TextView mItemPrice;
         public final ImageView mItemImage;
         public final TextView mItemDescription;
         public final TextView mItemQuantity;
+        public ShoppingItem item;
 
-        public ItemViewHolder(@NonNull View itemView, AdapterClass mAdapter) {
-            super(itemView);
-            this.mAdapter = mAdapter;
+        public ItemViewHolder(@NonNull View item, AdapterClass mAdapter) {
+            super(item);
             mItemHeader = itemView.findViewById(R.id.cardHeader);
             mItemPrice = itemView.findViewById(R.id.cardPrice);
             mItemImage = itemView.findViewById(R.id.imageofitem);
             mItemDescription = itemView.findViewById(R.id.cardDescription);
             mItemQuantity = itemView.findViewById(R.id.cardQuantity);
-
+            this.mAdapter = mAdapter;
         }
 
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()){
+                case (R.id.increasequantity):
+                    TextView view = v.findViewById(R.id.cardQuantity);
+                    int quantity = Integer.parseInt(view.getText().toString());
+                    view.setText(quantity + 1);
+                    break;
+                case (R.id.decreasequantity):
+                    view = v.findViewById(R.id.cardQuantity);
+                    quantity = Integer.parseInt(view.getText().toString());
+                    view.setText(quantity - 1);
+                    break;
+            }
+        }
     }
 }

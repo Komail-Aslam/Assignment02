@@ -14,7 +14,6 @@
             android:label="@string/title_activity_basic_menu"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".CheckoutActivity" />
-        <activity android:name=".MenuActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
