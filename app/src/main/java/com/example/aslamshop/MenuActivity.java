@@ -1,6 +1,5 @@
 package com.example.aslamshop;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,9 +7,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import static com.example.aslamshop.R.id.card1price;
-import static com.example.aslamshop.R.id.card1quantity;
-import static com.example.aslamshop.R.id.card1total;
+import static com.example.aslamshop.R.id.cardPrice;
+import static com.example.aslamshop.R.id.cardQuantity;
+import static com.example.aslamshop.R.id.cardTotal;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -26,7 +25,7 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        quantityTextView = findViewById(card1quantity);
+        quantityTextView = findViewById(cardQuantity);
     }
 
     public void launchCheckoutActivity(View view) {
@@ -38,15 +37,15 @@ public class MenuActivity extends AppCompatActivity {
 
     //increase and decrease method for each layout(An increase and decrease unique to its layout
     public void increase(View view){
-        quantityTextView = (TextView) findViewById(card1quantity);
+        quantityTextView = (TextView) findViewById(cardQuantity);
         quantity = Integer.parseInt(quantityTextView.getText().toString());
         quantity++;
         quantityTextView.setText(Integer.toString(quantity));
 
-        TextView priceOfItem = (TextView) findViewById(card1price);
+        TextView priceOfItem = (TextView) findViewById(cardPrice);
         price = Double.parseDouble(priceOfItem.getText().toString());
 
-        TextView quantityTotalView = (TextView) findViewById(card1total);
+        TextView quantityTotalView = (TextView) findViewById(cardTotal);
         quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
         quantityTotal += price;
         quantityTotalView.setText(String.format("%.2f",quantityTotal));
@@ -55,16 +54,16 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void decrease(View view){
-        TextView quantityTextView = (TextView) findViewById(card1quantity);
+        TextView quantityTextView = (TextView) findViewById(cardQuantity);
         quantity = Integer.parseInt(quantityTextView.getText().toString());
         if (quantity > 0) {
             quantity--;
             quantityTextView.setText(Integer.toString(quantity));
 
-            TextView priceOfItem = (TextView) findViewById(card1price);
+            TextView priceOfItem = (TextView) findViewById(cardPrice);
             price = Double.parseDouble(priceOfItem.getText().toString());
 
-            TextView quantityTotalView = (TextView) findViewById(card1total);
+            TextView quantityTotalView = (TextView) findViewById(cardTotal);
             quantityTotal = Double.parseDouble(quantityTotalView.getText().toString());
             quantityTotal -= price;
             quantityTotalView.setText(String.format("%.2f",quantityTotal));

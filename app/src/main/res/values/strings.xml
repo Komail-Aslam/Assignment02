@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">AslamShop</string>
     <string name="spalding_basketball">Spalding Basketball</string>
-    <string name="card1description">The Spalding ball is the official ball used in the NBA that can be used for indoor and outdoor use.</string>
+    <string name="carddescription">The Spalding ball is the official ball used in the NBA that can be used for indoor and outdoor use.</string>
     <string name="increasesymbol">+</string>
     <string name="decreasesymbol">-</string>
     <string name="checkout">Checkout</string>
     <string name="proceed">Proceed</string>
     <string name="welcome">Welcome to the Aslam Shop!</string>
     <string name="instructions">Press the button below to proceed to the shopping page and buy from our large selection of products.</string>
-    <string name="card1price">30.00</string>
+    <string name="cardprice">30.00</string>
     <string name="clippers_basketball">Clippers Basketball</string>
     <string name="card3price">40.00</string>
     <string name="card3description">The Los Angeles Clippers ball is great for outdoor playing and allows you to represent the team on the court.</string>
@@ -21,4 +21,5 @@
     <string name="total_before_taxes">Total before taxes:</string>
     <string name="tps">TPS:</string>
     <string name="tvq">TVQ:</string>
+    <string name="title_activity_basic_menu">BasicMenu</string>
 </resources>

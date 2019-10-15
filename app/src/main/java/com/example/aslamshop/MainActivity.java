@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     //Method to open the menu page using intent
     public void launchMenuActivity(View view) {
         Log.d(LOG_TAG, "menu activity opened");
-        Intent intent = new Intent(this, MenuActivity.class);
+        Intent intent = new Intent(this, BasicMenu.class);
         startActivity(intent);
     }
 }

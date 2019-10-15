@@ -23,6 +23,10 @@
                 android:layout_height="wrap_content" />
         </android.support.v7.widget.CardView>
 
+        <include
+            layout="@layout/card"
+            />
+
         <android.support.v7.widget.CardView
             android:id="@+id/cardview2"
             android:layout_width="match_parent"
