@@ -33,7 +33,7 @@ public class BasicMenu extends AppCompatActivity {
         for (int i = 0; i < 10; i++){
             mItemList.add(new ShoppingItem(getResources().getString(R.string.spalding_basketball),
                     getResources().getString(R.string.carddescription), getResources().getString(R.string.cardprice),
-                    getDrawable(R.drawable.spalding_ball) ,getResources().getInteger(R.integer.quantity)));
+                    getDrawable(R.drawable.spalding_ball) ,getResources().getString(R.string.cardQuantityString)));
         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basic_menu);

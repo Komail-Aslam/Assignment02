@@ -10,9 +10,9 @@ public class ShoppingItem {
     private String description;
     private String price;
     private Drawable img;
-    private int quantity;
+    private String quantity;
 
-    public ShoppingItem(String title, String description, String price, Drawable img, int quantity) {
+    public ShoppingItem(String title, String description, String price, Drawable img, String quantity) {
         this.title = title;
         this.description = description;
         this.price = price;
@@ -52,11 +52,11 @@ public class ShoppingItem {
         this.img = img;
     }
 
-    public int getQuantity() {
+    public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 }

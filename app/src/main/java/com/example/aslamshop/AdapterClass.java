@@ -4,9 +4,11 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextClock;
 import android.widget.TextView;
@@ -19,6 +21,7 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.ItemViewHold
 
     private LayoutInflater mInflater;
     private final LinkedList<ShoppingItem> mItemList;
+    private final String TAG = "LOG MESSAGE";
 
     public AdapterClass(Context context, LinkedList<ShoppingItem> mItemList) {
         this.mInflater = LayoutInflater.from(context);
@@ -37,7 +40,7 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.ItemViewHold
         ShoppingItem current = mItemList.get(i);
         itemViewHolder.mItemHeader.setText(current.getTitle());
         itemViewHolder.mItemDescription.setText(current.getDescription());
-        //itemViewHolder.mItemQuantity.setText(current.getQuantity());
+        itemViewHolder.mItemQuantity.setText(current.getQuantity());
         itemViewHolder.mItemPrice.setText(current.getPrice());
         itemViewHolder.mItemImage.setImageDrawable(current.getImg());
     }
@@ -54,6 +57,8 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.ItemViewHold
         public final ImageView mItemImage;
         public final TextView mItemDescription;
         public final TextView mItemQuantity;
+        public final Button mIncreaseQuantity;
+        public final Button mDecreaseQuantity;
         public ShoppingItem item;
 
         public ItemViewHolder(@NonNull View item, AdapterClass mAdapter) {
@@ -63,6 +68,10 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.ItemViewHold
             mItemImage = itemView.findViewById(R.id.imageofitem);
             mItemDescription = itemView.findViewById(R.id.cardDescription);
             mItemQuantity = itemView.findViewById(R.id.cardQuantity);
+            mIncreaseQuantity = itemView.findViewById(R.id.increasequantity);
+            mDecreaseQuantity = itemView.findViewById(R.id.decreasequantity);
+            mIncreaseQuantity.setOnClickListener(this);
+            mDecreaseQuantity.setOnClickListener(this);
             this.mAdapter = mAdapter;
         }
 
@@ -70,14 +79,15 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.ItemViewHold
         public void onClick(View v) {
             switch (v.getId()){
                 case (R.id.increasequantity):
-                    TextView view = v.findViewById(R.id.cardQuantity);
-                    int quantity = Integer.parseInt(view.getText().toString());
-                    view.setText(quantity + 1);
+                    Log.d(TAG, "YEEET");
+                    //TextView view = v.findViewById(R.id.cardQuantity);
+                    String quantity = mItemQuantity.getText().toString();
+                    mItemQuantity.setText(String.valueOf(Integer.parseInt(quantity) + 1));
                     break;
                 case (R.id.decreasequantity):
-                    view = v.findViewById(R.id.cardQuantity);
-                    quantity = Integer.parseInt(view.getText().toString());
-                    view.setText(quantity - 1);
+                   // view = v.findViewById(R.id.cardQuantity);
+                    quantity = mItemQuantity.getText().toString();
+                    mItemQuantity.setText(String.valueOf(Integer.parseInt(quantity) - 1));
                     break;
             }
         }
